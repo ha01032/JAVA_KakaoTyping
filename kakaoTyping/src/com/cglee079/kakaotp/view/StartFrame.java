@@ -252,15 +252,15 @@ public class StartFrame extends JFrame {
 					switch (levelID){
 					case "btn_level1":
 						level = 1;
-						speed = 10;
+						speed = 5;
 						break;
 					case "btn_level2":
 						level = 5;
-						speed = 20;
+						speed = 10;
 						break;
 					case "btn_level3":
 						level = 10;
-						speed = 30;
+						speed = 15;
 						break;
 					}
 					

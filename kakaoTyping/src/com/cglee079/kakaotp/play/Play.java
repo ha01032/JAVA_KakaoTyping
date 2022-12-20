@@ -346,7 +346,7 @@ public class Play {
 				playPanel.drawSpeed(formatter.format(speed));
 				
 				try {
-					sleep(100);
+					sleep(500);
 				} catch (InterruptedException e) {
 					return;
 				}
@@ -364,7 +364,7 @@ public class Play {
 				fallingAni.start();
 
 				try {
-					sleep(4000);
+					sleep(8000);
 				} catch (InterruptedException e) {
 					return;
 				}
@@ -383,7 +383,7 @@ public class Play {
 		
 		public void run() {
 			// 좌표값 설정
-			int x = (int) (Math.random() * 400);
+			int x = 50;
 			int y = 50;
 
 			// 단어를 랜덤하게 받아와 라벨 생성.
@@ -470,7 +470,7 @@ public class Play {
 		
 		public void call() {
 			curSpeed = speed;
-			speed = 5.0;
+			speed = 3.0;
 			
 			Timer t = new Timer(false);
 

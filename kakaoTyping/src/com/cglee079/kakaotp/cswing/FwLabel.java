@@ -16,7 +16,7 @@ public class FwLabel extends JLabel {
 
 	public FwLabel(String text) {
 		super(text);
-		setSize(120, 40);
+		setSize(410, 40);
 
 		if (Math.random() < 0.2) { // Item랜덤하게 생성
 			haveItem = true;

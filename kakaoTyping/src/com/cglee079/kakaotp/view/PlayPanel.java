@@ -438,7 +438,7 @@ public class PlayPanel extends JPanel {
 
 			inputWordPanel = new JPanel();	
 			inputWordPanel.setBackground(null);
-			wordTextField = new JTextField("", 20);
+			wordTextField = new JTextField("", 40);
 			
 			inputWordPanel.add(wordTextField);
 			add(inputWordPanel);

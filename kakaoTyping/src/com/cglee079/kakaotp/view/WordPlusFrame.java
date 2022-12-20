@@ -33,7 +33,7 @@ public class WordPlusFrame extends JFrame {
 		this.user = user;
 		this.wordSetFrame = wordListTable;
 
-		setSize(400, 350);
+		setSize(800, 350);
 		setResizable(false);
 		setUndecorated(true);
 		setVisible(true);
@@ -45,7 +45,7 @@ public class WordPlusFrame extends JFrame {
 		add(inputWordPanel, BorderLayout.NORTH);
 
 		inputPanel = new InputPanel();
-		inputPanel.setPreferredSize(new Dimension(400, 210));
+		inputPanel.setPreferredSize(new Dimension(800, 210));
 		add(inputPanel, BorderLayout.CENTER);
 
 		SubmitPanel submitPanel = new SubmitPanel();
@@ -57,17 +57,17 @@ public class WordPlusFrame extends JFrame {
 
 	class InputPanel extends JPanel {
 		InputPanel() {
-			setLayout(new FlowLayout(FlowLayout.CENTER, 15, 0));
+			setLayout(new FlowLayout(FlowLayout.CENTER, 30, 0));
 			setBackground(null);
 
 			koreanInput = new JTextArea();
-			koreanInput.setPreferredSize(new Dimension(150, 200));
-			koreanInput.setText("한글");
+			koreanInput.setPreferredSize(new Dimension(130, 200));
+			koreanInput.setText("keyword");
 			koreanInput.setFont(new GameFontP(15));
 
 			englishInput = new JTextArea();
-			englishInput.setPreferredSize(new Dimension(150, 200));
-			englishInput.setText("ENGLISH");
+			englishInput.setPreferredSize(new Dimension(600, 200));
+			englishInput.setText("code");
 			englishInput.setFont(new GameFontP(15));
 
 			add(koreanInput);
@@ -103,10 +103,7 @@ public class WordPlusFrame extends JFrame {
 					String korean[] = splite(koreanInput.getText());
 					String english[] = splite(englishInput.getText());
 
-					if (korean.length != english.length) {
-						JOptionPane.showMessageDialog(WordPlusFrame.this, "단어 갯수가 달라요", "경고!", JOptionPane.WARNING_MESSAGE);
-						return;
-					}
+					
 
 					String username = user.getUsername();
 					UserDictionary userDictionary = new UserDictionary(username);
